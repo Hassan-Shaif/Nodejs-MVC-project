@@ -1,0 +1,14 @@
+<%-include("./components/header")%>
+
+    <div class="card">
+      <div class="card-header">
+        Feed
+       <div class="card" style="width: 18rem;">
+         <div class="card-body">
+                <h5 class="card-title"><%= result.name %></h5>
+                <p class="card-text"><%= result.message %></p>
+                <a href=/edit/<%= result._id%> class="btn btn-primary">Edit Post</a>
+                <a href="/delete-post/<%= result._id%>" class="btn btn-primary">Delete</a>
+        </div>
+    </div>
+<%-include("./components/footer")%>

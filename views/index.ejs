@@ -1,0 +1,19 @@
+<%-include("./components/header")%>
+   <% if(result.length > 0){%>
+      <% result.forEach(element =>{%>
+        <p><%element.feed%></p>
+        <div class="card" style="width: 18rem;">
+              <div class="card-body">
+                    <h5 class="card-title"><a href ="/feed/<%= element._id%>"><%=element.name%></a></h5>
+                    <p class="card-text"><%=element.message%></p>
+
+             </div>
+        </div>
+     <% });%>
+   <%} else {%>
+        <p>There is nothing to show</p>
+   <%}%>
+
+
+
+<%-include("./components/footer")%>
